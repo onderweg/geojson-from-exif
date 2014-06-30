@@ -27,10 +27,11 @@ for path in files {
         var longitude = gps["Longitude"].doubleValue;
         let lngRef = gps["LongitudeRef"] as String;
         
+        // Time stamp of GPS data in GMT
         let dateStamp = gps["DateStamp"] as String;
         let timeStamp = gps["TimeStamp"] as String;
         
-        let date = NSDate(dateString:dateStamp, timeString:timeStamp)
+        let date = NSDate.fromExifDate(dateStamp, timeString:timeStamp)
         
         if (latRef.lowercaseString == "s") {
             latitude = -latitude;

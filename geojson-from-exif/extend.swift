@@ -8,15 +8,15 @@
 
 import Foundation
 
-extension NSDate
-    {
-    convenience
-        init(dateString:String, timeString:String) {
-            let dateStringFormatter = NSDateFormatter()
-            dateStringFormatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
-            dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-            let d = dateStringFormatter.dateFromString(dateString + " " + timeString)
-            self.init(timeInterval:0, sinceDate:d)
+extension NSDate {
+    
+    class func fromExifDate(dateString:String, timeString:String) -> NSDate {
+        let dateStringFormatter = NSDateFormatter()
+        dateStringFormatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
+        dateStringFormatter.timeZone = NSTimeZone(name:"UTC")
+        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        let d = dateStringFormatter.dateFromString(dateString + " " + timeString)
+        return NSDate(timeInterval:0, sinceDate:d);
     }
     
     /**
