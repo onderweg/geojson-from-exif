@@ -9,6 +9,7 @@
 import Foundation
 
 let path = (C_ARGC < 2) ? File.currentPath() : String.fromCString(C_ARGV[1]);
+
 let exists = File.exists(path);
 if ( !exists.0 || !exists.1 ) {
     println("Path not found: \(path)");
