@@ -1,10 +1,10 @@
-#GeoJSON from EXIF
+#GeoJSON from Exif
 
 Takes a path to a directory containing JPEG images and returns a GeoJSON file with all Exif GPS coordinates from these images.
 
 ##Usage
 
-Use from OSX command line:
+Use from OS X command line:
 
 	$ geojson-from-exif [path_to_directoy]
 	
@@ -19,6 +19,6 @@ This is a quick and dirty experiment with the new (at the time of writing) Swift
 
 [geojsonlint]: http://geojsonlint.com/
 
-# Similar
+## Similar
 
 * https://github.com/hallahan/exif-to-geojson

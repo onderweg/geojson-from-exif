@@ -12,6 +12,7 @@ let path = (C_ARGC < 2) ? File.currentPath() : String.fromCString(C_ARGV[1]);
 let exists = File.exists(path);
 if ( !exists.0 || !exists.1 ) {
     println("Path not found: \(path)");
+    exit(0);
 }
 
 var files = File.listDirectory(path, extensions:["jpg", "jpeg"]);
@@ -20,13 +21,23 @@ var points = PointCollection();
 
 for path in files {
     var exif = Exif.readFromFile(path);
-    
     if let gps = exif.objectForKey("{GPS}") as? NSDictionary {
-        let latitude = gps["Latitude"].doubleValue;
-        let longitude = gps["Longitude"].doubleValue;
+        var latitude = gps["Latitude"].doubleValue;
+        let latRef = gps["LatitudeRef"] as String;
+        var longitude = gps["Longitude"].doubleValue;
+        let lngRef = gps["LongitudeRef"] as String;
+        
         let dateStamp = gps["DateStamp"] as String;
         let timeStamp = gps["TimeStamp"] as String;
+        
         let date = NSDate(dateString:dateStamp, timeString:timeStamp)
+        
+        if (latRef.lowercaseString == "s") {
+            latitude = -latitude;
+        }
+        if (lngRef.lowercaseString == "w") {
+            longitude = -longitude;
+        }
         
         var point = Point( coordinates: (latitude:latitude, longitude:longitude) );
         point.properties["file"] = path.lastPathComponent;
@@ -36,5 +47,3 @@ for path in files {
 }
 
 println(points.toJsonText());
-
-

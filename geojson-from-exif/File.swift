@@ -39,7 +39,7 @@ class File {
                 // Filter out directories out specified extensions
                 var exists = File.exists($0);
                 return (exists.0 && !exists.1) &&
-                    (extensions.count == 0 || extensions.contains($0.pathExtension));
+                    (extensions.count == 0 || extensions.contains($0.pathExtension.lowercaseString ));
             } as Array<String>;
     }
     
