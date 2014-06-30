@@ -1,0 +1,5 @@
+# OS X noise
+.DS_Store
+
+# XCode personal settings
+xcuserdata
