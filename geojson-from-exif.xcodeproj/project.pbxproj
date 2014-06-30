@@ -1,0 +1,257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F6164301961A4120031C821 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F61642F1961A4120031C821 /* main.swift */; };
+		6F6164381961A4A70031C821 /* extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6164361961A4A70031C821 /* extend.swift */; };
+		6F6164391961A4A70031C821 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6164371961A4A70031C821 /* File.swift */; };
+		6F9A3DD61961C8ED001CFF62 /* exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD51961C8ED001CFF62 /* exif.swift */; };
+		6F9A3DD81961CB25001CFF62 /* geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD71961CB25001CFF62 /* geojson.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F61642A1961A4120031C821 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6F61642C1961A4120031C821 /* geojson-from-exif */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "geojson-from-exif"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F61642F1961A4120031C821 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6F6164361961A4A70031C821 /* extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extend.swift; sourceTree = "<group>"; };
+		6F6164371961A4A70031C821 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		6F9A3DD51961C8ED001CFF62 /* exif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exif.swift; sourceTree = "<group>"; };
+		6F9A3DD71961CB25001CFF62 /* geojson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = geojson.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F6164291961A4120031C821 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F6164231961A4120031C821 = {
+			isa = PBXGroup;
+			children = (
+				6F61642E1961A4120031C821 /* geojson-from-exif */,
+				6F61642D1961A4120031C821 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F61642D1961A4120031C821 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F61642C1961A4120031C821 /* geojson-from-exif */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F61642E1961A4120031C821 /* geojson-from-exif */ = {
+			isa = PBXGroup;
+			children = (
+				6F9A3DD71961CB25001CFF62 /* geojson.swift */,
+				6F6164361961A4A70031C821 /* extend.swift */,
+				6F6164371961A4A70031C821 /* File.swift */,
+				6F61642F1961A4120031C821 /* main.swift */,
+				6F9A3DD51961C8ED001CFF62 /* exif.swift */,
+			);
+			path = "geojson-from-exif";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F61642B1961A4120031C821 /* geojson-from-exif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F6164331961A4120031C821 /* Build configuration list for PBXNativeTarget "geojson-from-exif" */;
+			buildPhases = (
+				6F6164281961A4120031C821 /* Sources */,
+				6F6164291961A4120031C821 /* Frameworks */,
+				6F61642A1961A4120031C821 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "geojson-from-exif";
+			productName = "geojson-from-exif";
+			productReference = 6F61642C1961A4120031C821 /* geojson-from-exif */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F6164241961A4120031C821 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Onderweg;
+				TargetAttributes = {
+					6F61642B1961A4120031C821 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 6F6164271961A4120031C821 /* Build configuration list for PBXProject "geojson-from-exif" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6F6164231961A4120031C821;
+			productRefGroup = 6F61642D1961A4120031C821 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F61642B1961A4120031C821 /* geojson-from-exif */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F6164281961A4120031C821 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6164301961A4120031C821 /* main.swift in Sources */,
+				6F9A3DD81961CB25001CFF62 /* geojson.swift in Sources */,
+				6F9A3DD61961C8ED001CFF62 /* exif.swift in Sources */,
+				6F6164391961A4A70031C821 /* File.swift in Sources */,
+				6F6164381961A4A70031C821 /* extend.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6F6164311961A4120031C821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F6164321961A4120031C821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6F6164341961A4120031C821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6F6164351961A4120031C821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F6164271961A4120031C821 /* Build configuration list for PBXProject "geojson-from-exif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6164311961A4120031C821 /* Debug */,
+				6F6164321961A4120031C821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F6164331961A4120031C821 /* Build configuration list for PBXNativeTarget "geojson-from-exif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6164341961A4120031C821 /* Debug */,
+				6F6164351961A4120031C821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F6164241961A4120031C821 /* Project object */;
+}
