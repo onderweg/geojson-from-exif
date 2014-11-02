@@ -14,7 +14,7 @@ class PointCollection {
     
     var points:Array<Point> = Array<Point>();
     
-    var id:String = "exif";
+    var id:String = "";
     
     subscript(index: Int) -> Point {
         get {
@@ -33,6 +33,10 @@ class PointCollection {
         points.append(point);
     }
     
+    func count() -> Int {
+        return points.count;
+    }
+    
     func toJsonText() -> String {
         var jsonCreationError:NSError?;
         
@@ -40,7 +44,7 @@ class PointCollection {
             "type": "FeatureCollection",
             "features": self.points.map {
                 [
-                    "id": self.id,
+                    "id": $0.id,
                     "type": "Feature",
                     "properties": $0.properties,
                     "geometry": [
@@ -68,6 +72,8 @@ class PointCollection {
 }
 
 class Point {
+    
+    var id:String = "exif";
     
     var coordinates:Coordinates;
     

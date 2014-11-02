@@ -46,7 +46,7 @@ for path in files {
         point.properties["date"] = date.toJson();
 
         // Additional metadata (IPTC)
-        if let iptc = meta.objectForKey("{IPTC}") as? NSDictionary {
+        if let iptc = meta.objectForKey(kCGImagePropertyIPTCDictionary) as? NSDictionary {
             var descr = iptc[kCGImagePropertyIPTCCaptionAbstract as String] as String?;
             if (descr != nil) {
                 point.properties["description"] = descr;

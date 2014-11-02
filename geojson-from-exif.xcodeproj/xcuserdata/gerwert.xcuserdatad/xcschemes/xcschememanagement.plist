@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>UnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>geojson-from-exif.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6F0B10811A065A4E0048DFCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6F61642B1961A4120031C821</key>
 		<dict>
 			<key>primary</key>
