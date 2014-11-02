@@ -14,6 +14,8 @@ class PointCollection {
     
     var points:Array<Point> = Array<Point>();
     
+    var id:String = "exif";
+    
     subscript(index: Int) -> Point {
         get {
             return self.points[index];
@@ -38,6 +40,7 @@ class PointCollection {
             "type": "FeatureCollection",
             "features": self.points.map {
                 [
+                    "id": self.id,
                     "type": "Feature",
                     "properties": $0.properties,
                     "geometry": [
@@ -53,9 +56,9 @@ class PointCollection {
         ];
 
         let jsonData:NSData = NSJSONSerialization.dataWithJSONObject(dict,
-            options: NSJSONWritingOptions.PrettyPrinted, error: &jsonCreationError)
+            options: NSJSONWritingOptions.PrettyPrinted, error: &jsonCreationError)!
         
-        if jsonCreationError {
+        if (jsonCreationError != nil) {
             println("Errors: \(jsonCreationError)")
         }
         

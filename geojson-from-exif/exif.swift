@@ -12,26 +12,17 @@ class Exif {
     
     class func readFromFile(path:String) -> NSDictionary {
         var url = NSURL(fileURLWithPath: path);
-        var src:Unmanaged<CGImageSource>! = CGImageSourceCreateWithURL ( url as CFURLRef, nil);
-        
-        // Swift wraps returned Core Foundation objects in an Unmanaged<T> structure
-        // When you receive an unmanaged object from an unannotated API, you should immediately convert it to a memory managed object before you work with it.
-        var source : CGImageSource! = src.takeUnretainedValue();
-        
-        if ( source == nil )
+        var src = CGImageSourceCreateWithURL ( url, nil);
+
+        if ( src == nil )
         {
             println("Error: could not read image \(path)");
             exit(0);
         }
         
-        var meta:CFDictionary! = CGImageSourceCopyPropertiesAtIndex(source, 0, nil).takeUnretainedValue();
-        
-        // Cleanup
-        CFRelease(source);
-        CFRelease ( meta );
-        source = nil;
+        var meta:CFDictionary! = CGImageSourceCopyPropertiesAtIndex(src, 0, nil);
                 
-        return meta as NSDictionary;        
+        return meta as NSDictionary;    
     }
     
 }

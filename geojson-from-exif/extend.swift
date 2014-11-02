@@ -15,8 +15,8 @@ extension NSDate {
         dateStringFormatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
         dateStringFormatter.timeZone = NSTimeZone(name:"UTC")
         dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        let d = dateStringFormatter.dateFromString(dateString + " " + timeString)
-        return NSDate(timeInterval:0, sinceDate:d);
+        let date = dateStringFormatter.dateFromString(dateString + " " + timeString)
+        return date!;
     }
     
     /**
@@ -31,11 +31,8 @@ extension NSDate {
 }
 
 extension Array {
-    func contains(object:AnyObject!) -> Bool {
-        if(self.isEmpty) {
-            return false
-        }
-        let array: NSArray = self.bridgeToObjectiveC();
-        return array.containsObject(object)
+    func contains<T : Equatable>(obj: T) -> Bool {
+        let filtered = self.filter {$0 as? T == obj}
+        return filtered.count > 0
     }
 }
