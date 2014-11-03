@@ -81,6 +81,9 @@ class Point {
     
     init (coordinates:Coordinates) {
         self.coordinates = coordinates;
+        
+        // Generate unique id
+        self.id =  NSUUID().UUIDString;
     }
 
 }

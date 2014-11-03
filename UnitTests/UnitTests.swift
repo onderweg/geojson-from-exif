@@ -24,6 +24,16 @@ class UnitTests: XCTestCase {
         super.tearDown()
     }
     
+    func testExif() {
+        let bundle = NSBundle(forClass: UnitTests.self);
+        let imgSrc = bundle.URLForResource("example", withExtension: "jpg");
+        let meta = Exif.readFromUrl(imgSrc!);
+        
+        XCTAssertNotNil(meta, "Should have meta data");
+        XCTAssertNotNil(meta[kCGImagePropertyGPSDictionary as String], "Should contain GPS data");
+  
+    }
+    
     func testPoints() {
         var point = Point( coordinates: (latitude:12.2, longitude:12.4) );
         var points = PointCollection();

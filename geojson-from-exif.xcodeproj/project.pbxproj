@@ -10,6 +10,8 @@
 		6F0B10871A065A4E0048DFCD /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B10861A065A4E0048DFCD /* UnitTests.swift */; };
 		6F0B108C1A065A7D0048DFCD /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B108B1A065A7D0048DFCD /* MainTests.swift */; };
 		6F0B108D1A065ED70048DFCD /* geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD71961CB25001CFF62 /* geojson.swift */; };
+		6F0B109C1A07FA150048DFCD /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F0B109B1A07FA150048DFCD /* example.jpg */; };
+		6F0B109E1A07FB330048DFCD /* exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD51961C8ED001CFF62 /* exif.swift */; };
 		6F6164301961A4120031C821 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F61642F1961A4120031C821 /* main.swift */; };
 		6F6164381961A4A70031C821 /* extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6164361961A4A70031C821 /* extend.swift */; };
 		6F6164391961A4A70031C821 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6164371961A4A70031C821 /* File.swift */; };
@@ -34,6 +36,7 @@
 		6F0B10851A065A4E0048DFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0B10861A065A4E0048DFCD /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		6F0B108B1A065A7D0048DFCD /* MainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
+		6F0B109B1A07FA150048DFCD /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		6F61642C1961A4120031C821 /* geojson-from-exif */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "geojson-from-exif"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F61642F1961A4120031C821 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6F6164361961A4A70031C821 /* extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extend.swift; sourceTree = "<group>"; };
@@ -77,10 +80,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6F0B109A1A07F9F20048DFCD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F0B109D1A07FA2F0048DFCD /* test */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		6F0B109D1A07FA2F0048DFCD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				6F0B109B1A07FA150048DFCD /* example.jpg */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
 		6F6164231961A4120031C821 = {
 			isa = PBXGroup;
 			children = (
 				6F0B108B1A065A7D0048DFCD /* MainTests.swift */,
+				6F0B109A1A07F9F20048DFCD /* resources */,
 				6F61642E1961A4120031C821 /* geojson-from-exif */,
 				6F0B10831A065A4E0048DFCD /* UnitTests */,
 				6F61642D1961A4120031C821 /* Products */,
@@ -185,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F0B109C1A07FA150048DFCD /* example.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0B10871A065A4E0048DFCD /* UnitTests.swift in Sources */,
+				6F0B109E1A07FB330048DFCD /* exif.swift in Sources */,
 				6F0B108D1A065ED70048DFCD /* geojson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
