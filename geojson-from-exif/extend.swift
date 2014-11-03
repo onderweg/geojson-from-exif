@@ -20,7 +20,7 @@ extension NSDate {
     }
     
     /**
-     * Returns ISO-8601 date (e.g: 2013-04-27T13:27:50-0700_
+     * Returns ISO-8601 date (e.g: 2013-04-27T13:27:50-0700)
      */
     func toJson() -> String {
         let dateStringFormatter = NSDateFormatter()

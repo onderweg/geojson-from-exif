@@ -24,7 +24,7 @@ class UnitTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExif() {
+    func testMeta() {
         let bundle = NSBundle(forClass: UnitTests.self);
         let imgSrc = bundle.URLForResource("example", withExtension: "jpg");
         let meta = ImageMeta.readFromUrl(imgSrc!);

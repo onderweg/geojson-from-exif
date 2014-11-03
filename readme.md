@@ -19,6 +19,6 @@ This is a quick and dirty experiment with the new (at the time of writing) Swift
 
 ##Similar
 
-* https://github.com/hallahan/exif-to-geojson
+* [exif-to-geojson (Github)](https://github.com/hallahan/exif-to-geojson)
 
 [geojsonlint]: http://geojsonlint.com/
