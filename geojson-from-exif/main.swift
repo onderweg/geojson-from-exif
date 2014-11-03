@@ -19,14 +19,17 @@ if ( !exists.0 || !exists.1 ) {
 var files = File.listDirectory(path, extensions:["jpg", "jpeg"]);
 
 var points = PointCollection();
+var id:Int = 0;
 
 for path in files {
-    var meta = Exif.readFromFile(path);
+    var meta = ImageMeta.readFromFile(path);
+    
     if let gps = meta.objectForKey(kCGImagePropertyGPSDictionary) as? NSDictionary {
         var latitude: Double = (gps["Latitude"] as NSNumber).doubleValue;
         let latRef = gps["LatitudeRef"] as String;
         var longitude: Double = (gps["Longitude"] as NSNumber).doubleValue;
         let lngRef = gps["LongitudeRef"] as String;
+        let altitude: Double? = (gps["Altitude"] as Double?);
         
         // Time stamp of GPS data in GMT
         let dateStamp = gps["DateStamp"] as String;
@@ -41,7 +44,8 @@ for path in files {
             longitude = -longitude;
         }
         
-        var point = Point( coordinates: (latitude:latitude, longitude:longitude) );
+        var point = Point( coordinates: (latitude:latitude, longitude:longitude), altitude:altitude );
+        point.id = String(++id);
         point.properties["file"] = path.lastPathComponent;
         point.properties["date"] = date.toJson();
 

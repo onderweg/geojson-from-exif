@@ -27,7 +27,7 @@ class UnitTests: XCTestCase {
     func testExif() {
         let bundle = NSBundle(forClass: UnitTests.self);
         let imgSrc = bundle.URLForResource("example", withExtension: "jpg");
-        let meta = Exif.readFromUrl(imgSrc!);
+        let meta = ImageMeta.readFromUrl(imgSrc!);
         
         XCTAssertNotNil(meta, "Should have meta data");
         XCTAssertNotNil(meta[kCGImagePropertyGPSDictionary as String], "Should contain GPS data");

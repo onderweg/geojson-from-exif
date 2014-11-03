@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Exif {
+class ImageMeta {
     
     class func readFromUrl(url:NSURL) -> NSDictionary {
         var src = CGImageSourceCreateWithURL ( url, nil);

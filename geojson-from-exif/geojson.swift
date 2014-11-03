@@ -49,15 +49,13 @@ class PointCollection {
                     "properties": $0.properties,
                     "geometry": [
                         "type": "Point",
-                        "coordinates": [
-                            $0.coordinates.longitude,
-                            $0.coordinates.latitude
-                        ]
+                        "coordinates": $0.toArray()
                     ]
                     
                 ]
             }
         ];
+        
 
         let jsonData:NSData = NSJSONSerialization.dataWithJSONObject(dict,
             options: NSJSONWritingOptions.PrettyPrinted, error: &jsonCreationError)!
@@ -73,17 +71,32 @@ class PointCollection {
 
 class Point {
     
-    var id:String = "exif";
+    var id:String = "";
+    
+    var altitude:Double? = nil;
     
     var coordinates:Coordinates;
     
     var properties:Dictionary<String, AnyObject> = Dictionary<String, AnyObject>();
     
-    init (coordinates:Coordinates) {
+    init (coordinates:Coordinates, altitude:Double? = nil) {
         self.coordinates = coordinates;
-        
-        // Generate unique id
-        self.id =  NSUUID().UUIDString;
+        self.altitude = altitude;
+    }
+    
+    func toArray() -> Array<Double> {
+        if (self.altitude != nil) {
+            return [
+                self.coordinates.longitude,
+                self.coordinates.latitude,
+                self.altitude!
+            ];
+        } else {
+            return [
+                self.coordinates.longitude,
+                self.coordinates.latitude
+            ];
+        }
     }
 
 }

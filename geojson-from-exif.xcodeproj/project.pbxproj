@@ -11,11 +11,11 @@
 		6F0B108C1A065A7D0048DFCD /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B108B1A065A7D0048DFCD /* MainTests.swift */; };
 		6F0B108D1A065ED70048DFCD /* geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD71961CB25001CFF62 /* geojson.swift */; };
 		6F0B109C1A07FA150048DFCD /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F0B109B1A07FA150048DFCD /* example.jpg */; };
-		6F0B109E1A07FB330048DFCD /* exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD51961C8ED001CFF62 /* exif.swift */; };
+		6F0B109E1A07FB330048DFCD /* imagemeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD51961C8ED001CFF62 /* imagemeta.swift */; };
 		6F6164301961A4120031C821 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F61642F1961A4120031C821 /* main.swift */; };
 		6F6164381961A4A70031C821 /* extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6164361961A4A70031C821 /* extend.swift */; };
 		6F6164391961A4A70031C821 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6164371961A4A70031C821 /* File.swift */; };
-		6F9A3DD61961C8ED001CFF62 /* exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD51961C8ED001CFF62 /* exif.swift */; };
+		6F9A3DD61961C8ED001CFF62 /* imagemeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD51961C8ED001CFF62 /* imagemeta.swift */; };
 		6F9A3DD81961CB25001CFF62 /* geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A3DD71961CB25001CFF62 /* geojson.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		6F61642F1961A4120031C821 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6F6164361961A4A70031C821 /* extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extend.swift; sourceTree = "<group>"; };
 		6F6164371961A4A70031C821 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		6F9A3DD51961C8ED001CFF62 /* exif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exif.swift; sourceTree = "<group>"; };
+		6F9A3DD51961C8ED001CFF62 /* imagemeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagemeta.swift; sourceTree = "<group>"; };
 		6F9A3DD71961CB25001CFF62 /* geojson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = geojson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 				6F6164361961A4A70031C821 /* extend.swift */,
 				6F6164371961A4A70031C821 /* File.swift */,
 				6F61642F1961A4120031C821 /* main.swift */,
-				6F9A3DD51961C8ED001CFF62 /* exif.swift */,
+				6F9A3DD51961C8ED001CFF62 /* imagemeta.swift */,
 			);
 			path = "geojson-from-exif";
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0B10871A065A4E0048DFCD /* UnitTests.swift in Sources */,
-				6F0B109E1A07FB330048DFCD /* exif.swift in Sources */,
+				6F0B109E1A07FB330048DFCD /* imagemeta.swift in Sources */,
 				6F0B108D1A065ED70048DFCD /* geojson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +228,7 @@
 			files = (
 				6F6164301961A4120031C821 /* main.swift in Sources */,
 				6F9A3DD81961CB25001CFF62 /* geojson.swift in Sources */,
-				6F9A3DD61961C8ED001CFF62 /* exif.swift in Sources */,
+				6F9A3DD61961C8ED001CFF62 /* imagemeta.swift in Sources */,
 				6F6164391961A4A70031C821 /* File.swift in Sources */,
 				6F0B108C1A065A7D0048DFCD /* MainTests.swift in Sources */,
 				6F6164381961A4A70031C821 /* extend.swift in Sources */,
