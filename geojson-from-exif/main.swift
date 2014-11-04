@@ -27,15 +27,16 @@ for path in files {
     if let gps = meta.objectForKey(kCGImagePropertyGPSDictionary) as? NSDictionary {
         var latitude: Double = (gps["Latitude"] as NSNumber).doubleValue;
         let latRef = gps["LatitudeRef"] as String;
+        
         var longitude: Double = (gps["Longitude"] as NSNumber).doubleValue;
         let lngRef = gps["LongitudeRef"] as String;
-        let altitude: Double? = (gps["Altitude"] as Double?);
+        
+        var altitude: Double? = gps["Altitude"] as Double?;
+        var altRef: Int? = gps["AltitudeRef"] as Int?;
         
         // Time stamp of GPS data in GMT
-        let dateStamp = gps["DateStamp"] as String;
-        let timeStamp = gps["TimeStamp"] as String;
-        
-        let date = NSDate.fromExifDate(dateStamp, timeString:timeStamp)
+        let dateStamp = gps["DateStamp"] as String?;
+        let timeStamp = gps["TimeStamp"] as String?;
         
         if (latRef.lowercaseString == "s") {
             latitude = -latitude;
@@ -43,11 +44,18 @@ for path in files {
         if (lngRef.lowercaseString == "w") {
             longitude = -longitude;
         }
+        if (altRef != nil && altRef == 1) {
+            altitude = -(altitude!);
+        }
         
         var point = Point( coordinates: (latitude:latitude, longitude:longitude), altitude:altitude );
         point.id = String(++id);
         point.properties["file"] = path.lastPathComponent;
-        point.properties["date"] = date.toJson();
+        
+        if (dateStamp != nil && timeStamp != nil) {
+            let date = NSDate.fromExifDate(dateStamp!, timeString:timeStamp!);
+            point.properties["date"] = date.toJson();
+        }
 
         // Additional metadata (IPTC)
         if let iptc = meta.objectForKey(kCGImagePropertyIPTCDictionary) as? NSDictionary {
