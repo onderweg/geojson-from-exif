@@ -22,3 +22,14 @@ This is a quick and dirty experiment with the new (at the time of writing) Swift
 * [exif-to-geojson (Github)](https://github.com/hallahan/exif-to-geojson)
 
 [geojsonlint]: http://geojsonlint.com/
+
+##License
+
+Copyright G. Stevens 2014, all rights reserved.
+
+You are permitted to use, fork, modify and distribute this work.
+
+Under the following condition:
+
+If you wish to use the code in this repository in a project of your own,
+in any way that could be considered `derivative work,' then you must show attribution.
